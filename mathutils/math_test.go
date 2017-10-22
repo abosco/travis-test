@@ -21,6 +21,16 @@ func TestPowZero(t *testing.T) {
 	}
 }
 
+func TestPowImperativePowZero(t *testing.T) {
+	n, err := Pow_Imperative(1, 0)
+	if err != nil {
+		t.Fail()
+	}
+	if n != 1 {
+		t.Fail()
+	}
+}
+
 func TestPowPositive(t *testing.T) {
 	n, err := Pow(10, 3)
 	if err != nil {
